@@ -1,0 +1,18 @@
+# Open questions — sim-depth-physics-ml (follow-up 01)
+
+Date: 2026-09-13 · Each row is specific, falsifiable, actionable. No "more research needed" rows.
+
+| Question | Why it matters | What evidence would answer it | Priority |
+|---|---|---|---|
+| Q1. Which physics terms clear ΔF1_raw ≥3pp or ΔAC@1 ≥10pp vs their ablated arms on the frozen M0b battery (per-term, all seeds)? | Decides the entire upgrade-spec payload; every term below both deltas is cut (F7). | Same-seed ablated-vs-full runs, 20–32 faults, quantile fixed, PA-off, wall/diverge ledger; per-class Δ (abrupt vs drift vs sensor). | P0 |
+| Q2. Does the windows-only arm match windows+impulse within ±3pp F1 and ±5pp envelope separation? | Decides whether the synthetic impulse term ships at all; surviving reading of provisionally-refuted H2 leg (F8). | Three-way arms (RMS-only / windows-only / windows+impulse) + GES2N-style envelope-SNR statistic, pre-registered. | P0 |
+| Q3. Does ≥1 top-quartile raw-F1 setting breach 20/1000 AND 150/1000 healthy-window budgets with stability at 5/1000? | Decides whether the precision bar demotes anything real vs threshold-artifact (F9). | Healthy-window replay (transient-inclusive pool) + setting sweep + veto-off control; per-machine worst-zone rates recorded. | P1 |
+| Q4. Does the Jaccard graph-distance complement lift wear-drift AC@1 by ≥10pp to ≥50% without ≥10pp abrupt regression — and does the BARO-style graph-free control fail to match it? | Decides the causal-layer architecture; P3 is the highest-risk leg (F10). | Three arms + graph-free control, fault-subset AC@1 depth≤3, Tripwires A/B/C + P3 ±5pp match test. | P0 |
+| Q5. Does the uncalibrated-new-channel arm trip >150/1000 alerts or ≥5pp F1 drop vs calibrated — and does the global/auto arm match per-channel hand calibration? | Decides manual-spec vs auto-calibration ship rule (F11). | Calibrated vs uncalibrated vs global/auto arms, FAULT_RANGES fixed, per-channel verdicts. | P1 |
+| Q6. What are the verified magnitudes for CMC Table 6 (physics 11.7%?), Duan multiband, causRCA Tables 3/7, M2AD +21%, and the 299-normals rule — with full-text + second domain where required? | U1/U2/U5/U10/U11 currently cap five supporting legs at directional; magnitudes are uncitable until verified. | Targeted full-text fetches (G-H1-b, G-H2-a, G-H4-a, G-H5-a/b per evidence-log §4) + venue checks. | P1 |
+| Q7. Can a second independent graph-distance-for-drift source beyond A-S7 be found? | The complement win rests on a single source (U6); without one, the split ships on battery alone. | Title/field search "graph edit distance degradation tracking root cause time series manufacturing" (G-H4-c). | P1 |
+| Q8. Does transient-inclusive (start-up/changeover) healthy replay change demotion outcomes vs clean-steady replay? | H3-A2: the precision bar may be meaningless on clean segments and decisive on transient ones (F9). | Both healthy pools run side-by-side; demotion-count delta reported. | P2 |
+| Q9. Does multi-scale-windowed PCMCI+-alone recover wear-drift without any Jaccard machinery? | H4-A2: the fix may belong to H2 windowing, killing the need for a second causal method (F10). | PCMCI+-alone × {single-scale, multi-scale} factorial arm on the drift subset. | P1 |
+| Q10. What paired-real sample size (if any) validates CH8–CH10 transfer, and what is the measured sim→real gap per channel? | No Sim2Real claim ships without paired-real validation (claim boundary); U12 open. | ≥50 paired-real windows per channel + diversity-sampled synthetic (I14 direction); per-channel gap report. | P2 |
+
+*End — 10 questions, all battery- or fetch-actionable with numeric answers.*
